@@ -76,8 +76,8 @@ Pod::Spec.new do |spec|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-  spec.source       = { :http => 'file:' + "~/Workspace/Personal/SermanAnalyticFrameWork_test" }
-  #spec.source       = { :git => "https://github.com/sermandurai93/SermanAnalyticFrameWork_test", :tag => "#{spec.version}" }
+  #spec.source       = { :http => 'file:' + "~/Workspace/Personal/SermanAnalyticFrameWork_test" }
+  spec.source       = { :git => "https://github.com/sermandurai93/SermanAnalyticFrameWork_test.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -87,7 +87,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
 
-  spec.source_files  = "SermanAnalyticFrameWork_test/*.{swift}"
+  spec.source_files  = "SermanAnalyticFrameWork", "SermanAnalyticFrameWork/**/*.{swift}"
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -129,6 +129,7 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+   spec.dependency "JSONKit", "~> 1.4"
+   spec.dependency 'RBSNetwork', '~> 0.1.1'
 
 end
